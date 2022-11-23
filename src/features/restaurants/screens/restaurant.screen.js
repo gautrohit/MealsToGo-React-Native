@@ -7,7 +7,8 @@ import { ResturantInfoCard } from "../components/restaurant-info-card-component"
 // styled components
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
-  margin-top: ${StatusBar.currentHeight}px;
+  // checking if statusBar has a value (it's only in android not ios) $ is variable
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
 `;
 const SearchContainer = styled(View)`
   padding: 15px;
@@ -15,7 +16,7 @@ const SearchContainer = styled(View)`
 const ResturantListContainer = styled(View)`
   flex: 1;
   padding: 15px;
-  background-color: steelblue;
+  background-color: ${(props) => props.theme.colors.bg.secondary};
 `;
 
 export const RestaurantsScreen = () => {
