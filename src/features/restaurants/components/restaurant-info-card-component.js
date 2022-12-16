@@ -7,11 +7,11 @@ const RestaurantsCard = styled(Card)`
   backgroundcolor: ${(props) => props.theme.colors.bg.primary};
 `;
 const CardCover = styled(Card.Cover)`
-  padding: 20px;
+  padding: ${(props) => props.theme.space[3]}
   backgroundcolor: ${(props) => props.theme.colors.bg.primary};
 `;
 const Title = styled(Text)`
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]}
   color: ${(props) => props.theme.colors.ui.primary};
 `;
 
@@ -37,8 +37,3 @@ export const ResturantInfoCard = ({ resturant = {} }) => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  // card: { backgroundColor: "white" },
-  // cover: { padding: 20, backgroundColor: "white" },
-});
