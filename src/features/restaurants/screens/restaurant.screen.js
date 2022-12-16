@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, SafeAreaView, StatusBar } from "react-native";
+import { View, SafeAreaView, StatusBar } from "react-native";
 import { Searchbar } from "react-native-paper";
 import styled from "styled-components";
 import { ResturantInfoCard } from "../components/restaurant-info-card-component";
@@ -16,7 +16,7 @@ const SearchContainer = styled(View)`
 const ResturantListContainer = styled(View)`
   flex: 1;
   padding: ${(props) => props.theme.space[3]}
-  background-color: ${(props) => props.theme.colors.bg.secondary};
+  background-color: ${(props) => props.theme.colors.bg.secondary}
 `;
 
 export const RestaurantsScreen = () => {

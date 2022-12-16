@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text } from "react-native";
 import { Card } from "react-native-paper";
 import styled from "styled-components";
 
@@ -11,13 +11,14 @@ const CardCover = styled(Card.Cover)`
   backgroundcolor: ${(props) => props.theme.colors.bg.primary};
 `;
 const Title = styled(Text)`
+  font-family: ${(props) => props.theme.fonts.body}
   padding: ${(props) => props.theme.space[3]}
   color: ${(props) => props.theme.colors.ui.primary};
 `;
 
 export const ResturantInfoCard = ({ resturant = {} }) => {
   const {
-    name = "Raju Dhaba-01",
+    name = "Raju Dhaba",
     icon,
     photos = [
       "https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg",
