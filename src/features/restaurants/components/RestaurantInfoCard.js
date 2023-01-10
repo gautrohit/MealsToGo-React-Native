@@ -7,6 +7,7 @@ import { Text } from "./typography/Text";
 import {
   RestaurantsCard,
   CardCover,
+  Title,
   Address,
   Info,
   Rating,
@@ -36,7 +37,7 @@ export const ResturantInfoCard = ({ resturant = {} }) => {
       <RestaurantsCard>
         <CardCover key={name} source={{ uri: photos[0] }} />
         <Info>
-          <Text variant="label">{name}</Text>
+          <Title>{name}</Title>
           <Section>
             <Rating>
               {ratingArray.map(() => {

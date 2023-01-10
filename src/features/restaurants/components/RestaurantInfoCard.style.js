@@ -1,12 +1,21 @@
 import styled from "styled-components";
+import { Text, View, Image } from "react-native";
+import { Card } from "react-native-paper";
+import { SvgXml } from "react-native-svg";
 
 export const RestaurantsCard = styled(Card)`
   backgroundcolor: ${(props) => props.theme.colors.bg.primary};
+  margin-bottom: ${(props) => props.theme.space[3]};
 `;
 export const CardCover = styled(Card.Cover)`
   padding: ${(props) => props.theme.space[3]}
   backgroundcolor: ${(props) => props.theme.colors.bg.primary};
 `;
+export const Title = styled(Text)`
+  font-family: ${(props) => props.theme.fonts.heading}
+  font-size: ${(props) => props.theme.fontSizes.body}
+  color: ${(props) => props.theme.colors.ui.primary};
+  `;
 export const Address = styled(Text)`
 font-family: ${(props) => props.theme.fonts.body}
 font-size: ${(props) => props.theme.fontSizes.caption}
